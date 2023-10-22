@@ -662,5 +662,7 @@ line-height: 20px; /* 142.857% */
     .h4-cards img{
         width: 70%;
     }
-
+    .nav1{
+        border: none !important;
+    }
 }

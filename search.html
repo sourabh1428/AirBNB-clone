@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+
+    <nav class="nav-bar">
+        <div class="nav1">
+            <img src="./searchimg/./Vector (11).svg" alt="">
+
+        </div>
+        <div class="nav2">
+            <input class="nvip1" id="getLoc" type="text" placeholder="search..">
+            <input id="checkIn" type="date" placeholder="From">
+            
+            <input  id="checkOut" type="date" placeholder="to">
+
+            <input id="getGuest" class="nvip2"  type="number" placeholder="Guests">
+
+            <button class="searchButton"id="searchBTN"><img src="./searchimg/Icon (5).svg" alt=""></button>
+        </div>
+        <div class="nav3">
+                <p>Become a Host</p>
+                <img src="./searchimg/globe (2).svg" alt="">
+                <button  ><img src="./searchimg/menu (1).svg" alt=""><img src="./searchimg/Avatar (1).svg" alt=""></button>
+        </div>
+        
+    </nav>
+
+    <div class="filters">
+        <button>Price</button>
+        <button>Type of place</button>
+        <button>Free cancellation</button>
+        <button>Wifi</button>
+        <button>Kitchen</button>
+        <button>Air conditioning</button>
+        <button>Washer</button>
+        <button>Iron</button>
+        <button>Dedicated workspace</button>
+        <button>Free Parking</button>
+        <button>Dryers</button>
+        <button>Filters</button>
+
+
+    </div>
+    
+    <hr>
+    
+    <div id="myHero" class="hero">
+        <div class="heroleft">
+            <div id="noOfRes"></div>
+            
+            <div class="herolcards" id="cardHandler">
+<!--                
+                //all cards renders here -->
+
+            </div>
+        
+        </div>
+        
+        <div class="heroright" style="width: 600px;
+        height: 652px;
+        flex-shrink: 0;">
+            <img src="./searchimg/Map.jpg" alt="">
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="search.js"></script>
+</body>
+</html>
