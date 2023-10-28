@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Aclonica&family=DM+Sans:opsz@9..40&family=Gothic+A1&family=Inter&family=Montserrat&family=Plus+Jakarta+Sans&family=Poppins&family=Preahvihear&family=Roboto&family=Rubik&display=swap');
 
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -21,7 +23,7 @@
 
 }
 .nav2 input{
-    border: 1px solid var(--gray-200, #E5E7EB);
+    border: 1px solid var(--gray-200, #4c4d4f);
 
     padding: 8px 8px 8px 24px;
     background: var(--white, #FFF);
@@ -149,8 +151,9 @@ line-height: 20px; /* 142.857% */
     display: flex;
     flex: row;
     padding: 20px;
+    flex-direction: row;
     border-radius: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     gap: 24px;
     align-items: center;
     justify-content: flex-start;
@@ -254,3 +257,36 @@ line-height: 20px; /* 142.857% */
 #checkOut{
     width: 10px;
 }
+
+.card:hover{
+    cursor: pointer;
+
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.modalPt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    font-family: Inter;
+    
+}
+.modalPt h1{
+    font-size: medium;
+}
+.modalPt h2{
+    font-size: medium;
+}
+
+
+.modalul{
+    list-style: none !important;
+}
+
+.modalul li{
+    font-family: Inter;
+}
+
