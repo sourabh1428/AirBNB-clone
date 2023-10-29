@@ -5,7 +5,7 @@ const noOfRes = document.getElementById("noOfRes");
 const cardHandler = document.getElementById("cardHandler");
 const getLoc = document.getElementById("getLoc");
 const myHero = document.getElementById("myHero");
-
+const getGuest = document.getElementById("getGuest")
 
 
 const resultant = {
@@ -638,7 +638,9 @@ function getLocation() {
 
 
 checkin.addEventListener("change", function (event) {
+
   ind = event.target.value;
+
 });
 checkout.addEventListener("change", function (event) {
   out = event.target.value;
@@ -743,6 +745,9 @@ async function directionMap(startPoint, endPoint) {
 // }
 
 async function attachFiles(res) {
+  while(cardHandler.lastChild){
+    cardHandler.removeChild(cardHandler.lastChild);
+  }
   console.log(res);
   const results = res.results;
   let locations = [];
@@ -869,5 +874,26 @@ async function fetchData(location, startDate, endDate, noOfGuest) {
 }
 
 //YYYY-MM-DD
+function initialLoad(){
+  getLoc.value=localStorage.getItem('location');;
+  getGuest.value=localStorage.getItem('guest');
+  ind=localStorage.getItem('checkin');
+  out=localStorage.getItem('checkout');
+  console.log(checkin.value);
+  console.log(checkout.value);
+  console.log(getLoc.value);
+  console.log(noOfRes.value);
+  function autoClick() {
+    searchBTN.click();
+}
 
+// Call the autoClick function when the page loads
+// window.addEventListener('load', autoClick);
 
+}
+let hue=true;
+
+if(hue){
+  initialLoad();
+  hue=false;
+}

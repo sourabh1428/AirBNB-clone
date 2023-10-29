@@ -19,14 +19,15 @@
     align-items: center;
     justify-content: center;
     align-items: center;
-   
+   border: none !important;
 
 }
 .nav2 input{
-    border: 1px solid var(--gray-200, #4c4d4f);
 
+    width: 100px;
     padding: 8px 8px 8px 24px;
     background: var(--white, #FFF);
+    border: none !important;
     /* shadow-md */
     box-shadow: 0px 4px 6px 0px rgba(31, 41, 55, 0.10), 0px 2px 4px 0px rgba(31, 41, 55, 0.06);
 
@@ -34,11 +35,15 @@
 .nvip1 {
     width: 100px;
     border-radius: 20px 0 0 20px;
+    font-family:Inter ;
+    font-weight: bold;
 }
 
 .nvip2 {
-    width: 50px;
+    width: 60px;
     border-radius: 0 20px 20px 0;
+    font-family:Inter ;
+    font-weight: bold;
 }
 
 
@@ -252,10 +257,10 @@ line-height: 20px; /* 142.857% */
 }
 
 #checkIn{
-    width: 10px;
+    width: 50px;
 }
 #checkOut{
-    width: 10px;
+    width: 50px;
 }
 
 .card:hover{

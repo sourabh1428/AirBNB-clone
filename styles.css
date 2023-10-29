@@ -84,15 +84,18 @@
 }
 .ip-box {
   position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
+
   flex-direction: column;
 }
 .ip-box input {
   height: 50px;
+
   border: none;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .ip-box i {
