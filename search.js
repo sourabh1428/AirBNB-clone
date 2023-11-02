@@ -651,7 +651,7 @@ searchBTN.addEventListener("click", async function () {
   const loc = getLoc.value;
   const ng = document.getElementById("getGuest").value;
   const ans = await fetchData(loc, ind, out, ng);
-  await attachFiles(ans);
+  await attachFiles(resultant);
   console.log(ans);
 });
 
@@ -919,7 +919,7 @@ async function fetchData(location, startDate, endDate, noOfGuest) {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "4592089490mshb22a0ee0cc54918p1168e9jsna82460434d9c",
+      "X-RapidAPI-Key": "4ad94a60admsh9b64ecb1c048afap1981d5jsn71b5cc6ce9cc",
       "X-RapidAPI-Host": "airbnb13.p.rapidapi.com",
     },
   };

@@ -326,10 +326,11 @@ font-weight: bolder    !important;
     }
     .heroleft{
         width: 100% !important;
+        padding: 0px !important;
     }
     .herolcards{
         width: 100% !important;
-        padding: 20px !important;
+   
         align-items: center !important;
     }
     .heroright{
@@ -351,14 +352,16 @@ font-weight: bolder    !important;
     .filters{
         display: none !important;
     }
-    .card{
+    .card :hover{
         align-items: center !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !important;
     }
     .cardQType{
 
     }
     .card{
-        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px !important;
+        padding: 10px !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !important;
     }
     #hotelName{
         align-self: center !important;
