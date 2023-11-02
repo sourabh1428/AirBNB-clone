@@ -568,6 +568,8 @@ line-height: 20px; /* 142.857% */
     text-decoration-line: underline;
 }
 
+
+
 @media  screen and (max-width:780px) {
     .nav-bar,.nav1,.nav2,.nav3,.search-1,.h3-cards,.h4-cards,.hero-5-container{
         flex-direction: column;

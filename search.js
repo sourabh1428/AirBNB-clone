@@ -792,11 +792,11 @@ function addModal(objk) {
 
   const currency = (document.createElement(
     "h1"
-  ).innerText = `Price ${objk.price.currency}`);
+  ).innerText = `Price ${objk.price.currency}💰`);
   const rate = document.createElement("h2");
-  rate.innerText = `Rate: ${objk.price.rate}  ${objk.price.currency}`;
+  rate.innerText = `Rate: ${objk.price.rate}  ${objk.price.currency} 💰`;
   const total = document.createElement("h1");
-  total.innerText = `Total: ${objk.price.total}  ${objk.price.currency}`;
+  total.innerText = `Total: ${objk.price.total}  ${objk.price.currency} 💸`;
 
   pt.append(rate, total);
   pt.style.display = "flex";
@@ -894,7 +894,7 @@ async function createNewCard(objk){
     let res= await objk;
     
 
-    newCard.innerHTML=`<div class="cardl"><img id="cardImg" src=${res.images[0]} alt=""></div><div class="cardr"><div><p class="cardType">${res.type}</p><h1 id="hotelName">${res.name}</h1></div><div><div id="foundDis"></div><ul id="hotelAmenities"><li>${res.previewAmenities[0]}</li><li>${res.previewAmenities[1]}</li><li>${res.previewAmenities[2]}</li></ul></div><div class="cardrb"><div><p id="hotelRatings">${res.rating}</p><img src="./searchimg/star (2).svg" alt=""><div><p class="cardRev" id="Reviews">${ res.reviewsCount}</p><p class="cardRev">Reviews</p></div></div><p id="hotelPrice">${res.price.rate}$</p><button class="getDisBtn">Get Distance</button></div></div></div>`;
+    newCard.innerHTML=`<div class="cardl"><img id="cardImg" src=${res.images[0]} alt="Hotel image not available"></div><div class="cardr"><div><p class="cardType">${res.type}</p><h1 id="hotelName">${res.name}</h1></div><div><div id="foundDis"></div><ul id="hotelAmenities"><li>${res.previewAmenities[0]}</li><li>${res.previewAmenities[1]}</li><li>${res.previewAmenities[2]}</li></ul></div><div class="cardrb"><div><p id="hotelRatings">${res.rating}</p><img src="./searchimg/star (2).svg" alt=""><div><p class="cardRev" id="Reviews">${ res.reviewsCount}</p><p class="cardRev">Reviews</p></div></div><p id="hotelPrice">${res.price.rate}💰</p><button class="getDisBtn">Get Distance</button></div></div></div>`;
     
     newCard.addEventListener("click",function (event){
 
@@ -946,6 +946,8 @@ function initialLoad(){
   console.log(checkout.value);
   console.log(getLoc.value);
   console.log(noOfRes.value);
+
+
   function autoClick() {
     searchBTN.click();
 }
@@ -960,3 +962,13 @@ if(hue){
   initialLoad();
   hue=false;
 }
+
+document.getElementById("filterButton").addEventListener("click", function () {
+  const allfilters = document.getElementById("allfilters");
+
+  if (window.getComputedStyle(allfilters).display === "none") {
+    allfilters.style.display = "flex";
+  } else {
+    allfilters.style.display = "none";
+  }
+});

@@ -303,3 +303,71 @@ border: none !important;
 font-weight: bolder    !important;
 
 }
+.fbutton{
+    position: block;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
+#filterButton{
+    display: none !important;
+    border: none;
+    padding: 10px;
+    font-family: Roboto !important;
+    border: 1px gray;
+
+}
+
+
+@media screen and (max-width:700px) {
+    .hero{
+        flex-direction: column !important;
+        width: 100%;
+    }
+    .heroleft{
+        width: 100% !important;
+    }
+    .herolcards{
+        width: 100% !important;
+        padding: 20px !important;
+        align-items: center !important;
+    }
+    .heroright{
+        display: none !important;
+    }
+    .card , .filters{
+        display: block !important;
+    }
+    .nav-bar{
+        flex-direction: column !important;
+        gap: 20px;
+    }
+    .nav3{
+        display: none !important;
+    }
+    #filterButton{
+        display: block !important;
+    }
+    .filters{
+        display: none !important;
+    }
+    .card{
+        align-items: center !important;
+    }
+    .cardQType{
+
+    }
+    .card{
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px !important;
+    }
+    #hotelName{
+        align-self: center !important;
+        font-size: large !important;
+    }
+   .cardl , .cardr , .cardType{
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+   }
+}
