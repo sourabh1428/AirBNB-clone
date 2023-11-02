@@ -777,10 +777,11 @@ async function attachFiles(res) {
 //for testing
 
 function addModal(objk) {
+
   $(".modal").modal("show");
 
   const modalHue = document.getElementById("modalHue");
-
+  document.getElementById("topicShow").style.display="block";
   //removing previous all modal
   while (modalHue.lastChild) modalHue.removeChild(modalHue.lastChild);
   const pt = document.createElement("div");
@@ -839,13 +840,75 @@ function addModal(objk) {
 // }
 // test();
 
+function hueDis(objk,event){
+  document.getElementById("topicShow").style.display="none";
+  
+  console.log(objk.lat,objk.lng);
+
+  console.log(myLat,myLong);        
+  $(".modal").modal("show");
+
+  const modalHue = document.getElementById("modalHue");
+
+  //removing previous all modal
+  while (modalHue.lastChild) modalHue.removeChild(modalHue.lastChild);
+  const pt = document.createElement("div");
+  pt.classList = "modalPt";
+
+ 
+  pt.innerText=`Approximate distance :${calculateDistance(objk.lat,objk.lng,myLat,myLong)}km`;
+  modalHue.append(pt);
+  console.log(event);
+}
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  const R = 6371; // Earth's radius in km
+  const lat1Rad = (lat1 * Math.PI) / 180;
+  const lon1Rad = (lon1 * Math.PI) / 180;
+  const lat2Rad = (lat2 * Math.PI) / 180;
+  const lon2Rad = (lon2 * Math.PI) / 180;
+  
+  const dLat = lat2Rad - lat1Rad;
+  const dLon = lon2Rad - lon1Rad;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1Rad) * Math.cos(lat2Rad) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const distance = R * c; // Distance in kilometers
+  
+  // Round the distance to two decimal places
+  const roundedDistance = distance.toFixed(2);
+  
+  return roundedDistance;
+}
+
+// Example usage
+
+
+
 async function createNewCard(objk){
     let newCard=document.createElement("div");
     newCard.classList="card";
-    newCard.addEventListener("click", () => addModal(objk));
+    
+   
     let res= await objk;
+    
 
-    newCard.innerHTML=`<div class="cardl"><img id="cardImg" src=${res.images[0]} alt=""></div><div class="cardr"><div><p class="cardType">${res.type}</p><h1 id="hotelName">${res.name}</h1></div><div><ul id="hotelAmenities"><li>${res.previewAmenities[0]}</li><li>${res.previewAmenities[1]}</li><li>${res.previewAmenities[2]}</li></ul></div><div class="cardrb"><div><p id="hotelRatings">${res.rating}</p><img src="./searchimg/star (2).svg" alt=""><div><p class="cardRev" id="Reviews">${ res.reviewsCount}</p><p class="cardRev">Reviews</p></div></div><p id="hotelPrice">${res.price.rate}$</p></div></div></div>`;
+    newCard.innerHTML=`<div class="cardl"><img id="cardImg" src=${res.images[0]} alt=""></div><div class="cardr"><div><p class="cardType">${res.type}</p><h1 id="hotelName">${res.name}</h1></div><div><div id="foundDis"></div><ul id="hotelAmenities"><li>${res.previewAmenities[0]}</li><li>${res.previewAmenities[1]}</li><li>${res.previewAmenities[2]}</li></ul></div><div class="cardrb"><div><p id="hotelRatings">${res.rating}</p><img src="./searchimg/star (2).svg" alt=""><div><p class="cardRev" id="Reviews">${ res.reviewsCount}</p><p class="cardRev">Reviews</p></div></div><p id="hotelPrice">${res.price.rate}$</p><button>get Dis</button></div></div></div>`;
+    
+    newCard.addEventListener("click",function (event){
+
+      event.preventDefault();
+      event.stopPropagation();
+      addModal(objk);
+    });
+    newCard.querySelector("button").addEventListener("click", function(event) {
+      event.stopPropagation();
+      event.preventDefault();
+      hueDis(objk ,event);
+    });
+    
+
 
      cardHandler.append(newCard);
 
@@ -888,7 +951,7 @@ function initialLoad(){
 }
 
 // Call the autoClick function when the page loads
-window.addEventListener('load', autoClick);
+// window.addEventListener('load', autoClick);
 
 }
 let hue=true;
