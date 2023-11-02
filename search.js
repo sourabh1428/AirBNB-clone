@@ -951,7 +951,7 @@ function initialLoad(){
 }
 
 // Call the autoClick function when the page loads
-// window.addEventListener('load', autoClick);
+window.addEventListener('load', autoClick);
 
 }
 let hue=true;
