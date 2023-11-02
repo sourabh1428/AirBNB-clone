@@ -651,7 +651,7 @@ searchBTN.addEventListener("click", async function () {
   const loc = getLoc.value;
   const ng = document.getElementById("getGuest").value;
   const ans = await fetchData(loc, ind, out, ng);
-  await attachFiles(resultant);
+  await attachFiles(ans);
   console.log(ans);
 });
 
