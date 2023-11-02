@@ -207,15 +207,17 @@ line-height: 20px; /* 142.857% */
 .cardrb{
     display: flex;
     width: 100%;
-    
+    align-items: center;
     flex-direction: row;
+    gap: 20px;
     justify-content: space-between;
 }
 .cardrb div{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 
 }
 .cardrb p{
@@ -295,3 +297,9 @@ line-height: 20px; /* 142.857% */
     font-family: Inter;
 }
 
+.getDisBtn{
+
+border: none !important;
+font-weight: bolder    !important;
+
+}

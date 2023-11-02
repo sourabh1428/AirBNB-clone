@@ -894,7 +894,7 @@ async function createNewCard(objk){
     let res= await objk;
     
 
-    newCard.innerHTML=`<div class="cardl"><img id="cardImg" src=${res.images[0]} alt=""></div><div class="cardr"><div><p class="cardType">${res.type}</p><h1 id="hotelName">${res.name}</h1></div><div><div id="foundDis"></div><ul id="hotelAmenities"><li>${res.previewAmenities[0]}</li><li>${res.previewAmenities[1]}</li><li>${res.previewAmenities[2]}</li></ul></div><div class="cardrb"><div><p id="hotelRatings">${res.rating}</p><img src="./searchimg/star (2).svg" alt=""><div><p class="cardRev" id="Reviews">${ res.reviewsCount}</p><p class="cardRev">Reviews</p></div></div><p id="hotelPrice">${res.price.rate}$</p><button>get Dis</button></div></div></div>`;
+    newCard.innerHTML=`<div class="cardl"><img id="cardImg" src=${res.images[0]} alt=""></div><div class="cardr"><div><p class="cardType">${res.type}</p><h1 id="hotelName">${res.name}</h1></div><div><div id="foundDis"></div><ul id="hotelAmenities"><li>${res.previewAmenities[0]}</li><li>${res.previewAmenities[1]}</li><li>${res.previewAmenities[2]}</li></ul></div><div class="cardrb"><div><p id="hotelRatings">${res.rating}</p><img src="./searchimg/star (2).svg" alt=""><div><p class="cardRev" id="Reviews">${ res.reviewsCount}</p><p class="cardRev">Reviews</p></div></div><p id="hotelPrice">${res.price.rate}$</p><button class="getDisBtn">Get Distance</button></div></div></div>`;
     
     newCard.addEventListener("click",function (event){
 
@@ -919,7 +919,7 @@ async function fetchData(location, startDate, endDate, noOfGuest) {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "7164fcdea2msh86bb57293a100bap1e6c18jsncd97957f0f1b",
+      "X-RapidAPI-Key": "4592089490mshb22a0ee0cc54918p1168e9jsna82460434d9c",
       "X-RapidAPI-Host": "airbnb13.p.rapidapi.com",
     },
   };
